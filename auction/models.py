@@ -21,13 +21,13 @@ class Item(models.Model):
         return self.name
 
 
-class LotWin(models.Model):
-    bet = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    item = models.ForeignKey(Item, on_delete=models.DO_NOTHING)
-    date_ordered = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.bet} {self.item.name} {self.item.price}'
+# class LotWin(models.Model):
+#     bet = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+#     item = models.ForeignKey(Item, on_delete=models.DO_NOTHING)
+#     date_ordered = models.DateTimeField(auto_now_add=True)
+#
+#     def __str__(self):
+#         return f'{self.bet} {self.item.name} {self.item.price}'
 
 
 
