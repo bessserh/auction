@@ -13,16 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf import settings
+# from django.conf import settings
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.db import router
+# from django.db import router
 from django.urls import path, include
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from rest_framework import routers
-from rest_framework_simplejwt import views as jwt_views
-from auction import views
+# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+# from rest_framework import routers
+# from rest_framework_simplejwt import views as jwt_views
+# from auction import views
 
 
 
@@ -40,10 +40,10 @@ urlpatterns = [
 # router = routers.DefaultRouter()
 # router1.register(r'items', ItemViewAPI)
 
-urlpatterns += [
-    # path('', include(router1.urls)),
-    path('items/', views.ItemViewAPI.as_view()),
-    # path('api/items/<int:pk>/', views.ItemViewAPI.as_view()),
-]  # for API view
+# urlpatterns += [
+#     # path('', include(router1.urls)),
+#     path('items/', views.ItemViewAPI.as_view()),
+#     # path('api/items/<int:pk>/', views.ItemViewAPI.as_view()),
+# ]  # for API view
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

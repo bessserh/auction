@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 
 
-from .serializers import ItemSerializer
+#from .serializers import ItemSerializer
 from rest_framework import viewsets, mixins, generics
 
 from auction.models import Item, Photo
@@ -74,14 +74,14 @@ class AddItemView(View):
         return redirect('/')
 
 
-class ItemViewAPI(mixins.ListModelMixin,
-               mixins.CreateModelMixin,
-               generics.GenericAPIView):
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer
-
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+# class ItemViewAPI(mixins.ListModelMixin,
+#                mixins.CreateModelMixin,
+#                generics.GenericAPIView):
+#     queryset = Item.objects.all()
+#     serializer_class = ItemSerializer
+#
+#     def get(self, request, *args, **kwargs):
+#         return self.list(request, *args, **kwargs)
+#
+#     def post(self, request, *args, **kwargs):
+#         return self.create(request, *args, **kwargs)
