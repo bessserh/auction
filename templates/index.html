@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="row">
+{% for item in items %}
+ <div class="card" style="width: 18rem;">
+  <img src="{{ item.photo }}" class="card-img-top" alt="no PHOTO">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">{{ item.date_added }}</p>
+      <p class="card-text">{{ item.date_stop }}</p>
+      <p class="card-text">{{ item.price }}</p>
+    <p class="card-text">{{ item.description }}</p>
+
+  </div>
+ </div>
+ {% endfor %}
+    </div>
+{% endblock %}
