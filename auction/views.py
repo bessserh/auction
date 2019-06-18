@@ -5,7 +5,7 @@ from django.views import View
 
 
 #from .serializers import ItemSerializer
-from rest_framework import viewsets, mixins, generics
+#from rest_framework import viewsets, mixins, generics
 
 from auction.models import Item, Photo
 
